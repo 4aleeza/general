@@ -1,0 +1,59 @@
+//matchstick box question
+
+
+
+#include <stdio.h>
+void sechalf(int cp,int up){
+    if (up==1){
+        printf("cp=9");
+        printf("YOU LOSE---BETTER LUCK NEXT TIME---");
+    }
+    else if (up==2){
+        printf("cp=6 \n");
+        printf("YOU LOSE---BETTER LUCK NEXT TIME---");
+       
+    }
+    else if (up==3){
+        printf("cp==7 \n");
+        printf("YOU LOSE---BETTER LUCK NEXT TIME---");
+       
+    }
+    else if (up==4){
+        printf("cp=6 \n");
+        printf("YOU LOSE---BETTER LUCK NEXT TIME---");
+    }
+    else if (up<1 || up>4) {printf("cba \n");}
+}
+int main(){
+    int up; //user's pick
+    int cp; //computer's pick
+    printf("WELCOME TO THE MATCHSTICK GAME \n");
+    printf("PICK A NUMBER FROM WITHIN 1-4 : \n");
+    scanf("%d", &up);
+    if (up==1){
+        printf("cp=9 \n");
+        printf("enter user pick : \n");
+        scanf("%d", &up);
+        sechalf(up,cp);
+    }
+    else if (up==2){
+        printf("cp=8 \n");
+        printf("enter user pick : \n");
+        scanf("%d", &up);
+        sechalf(up,cp);
+    }
+    else if (up==3){
+        printf("cp=7 \n");
+        printf("enter user pick : \n");
+        scanf("%d", &up);
+        sechalf(up,cp);
+    }
+    else if (up==4){
+        printf("cp=6 \n");
+        printf("enter user pick : \n");
+        scanf("%d", &up);
+        sechalf(up,cp);
+    }
+    else printf("CBA \n");
+    return 0;
+}
