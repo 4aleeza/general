@@ -1,59 +1,78 @@
-//matchstick box question
-
-
-
+//21 matchstick game question:
 #include <stdio.h>
-void sechalf(int cp,int up){
-    if (up==1){
-        printf("cp=9");
-        printf("YOU LOSE---BETTER LUCK NEXT TIME---");
+int up; //user's pick of matches
+int cp; //computer's pick of matches
+int s_up; //second pick of user for matchsticks
+int t_up; //third pick of user for matchsticks
+    void secondhalf(int s_up){
+        if (s_up==1){
+            printf("CP=9 \n");
+            printf("Enter Third User Pick : \n");
+            scanf("%d", t_up);
+            if (t_up>1){
+                printf("INVALID INPUT: 21 MATCHES IN TOTAL: INSUFFICIENT NUMBER OF MATCHES \n");    
+            }
+            else printf("YOU LOST! BETTER LUCK NEXT TIME. \n");
+        }
+        else if (s_up==2){
+            printf("CP=8 \n");
+            printf("Enter Third User Pick : \n");
+            scanf("%d", t_up);
+            if (t_up>1){
+                printf("INVALID INPUT: 21 MATCHES IN TOTAL: INSUFFICIENT NUMBER OF MATCHES \n");    
+            }
+            else printf("YOU LOST! BETTER LUCK NEXT TIME. \n");
+        }
+        else if (s_up==3){
+            printf("CP=7 \n");
+            printf("Enter Third User Pick : \n");
+            scanf("%d", t_up);
+            if (t_up>1){
+                printf("INVALID INPUT: 21 MATCHES IN TOTAL: INSUFFICIENT NUMBER OF MATCHES \n");    
+            }
+            else printf("YOU LOST! BETTER LUCK NEXT TIME. \n");
+        }
+        else if (s_up==4){
+            printf("CP=6 \n");
+            printf("Enter Third User Pick : \n");
+            scanf("%d", t_up);
+            if (t_up>1){
+                printf("INVALID INPUT: 21 MATCHES IN TOTAL: INSUFFICIENT NUMBER OF MATCHES \n");    
+            }
+            else printf("YOU LOST! BETTER LUCK NEXT TIME. \n");
+        }
+        else printf("--INVALID INPUT: 1 MATCHSTICKS REMAIN-- \n");
     }
-    else if (up==2){
-        printf("cp=6 \n");
-        printf("YOU LOSE---BETTER LUCK NEXT TIME---");
-       
-    }
-    else if (up==3){
-        printf("cp==7 \n");
-        printf("YOU LOSE---BETTER LUCK NEXT TIME---");
-       
-    }
-    else if (up==4){
-        printf("cp=6 \n");
-        printf("YOU LOSE---BETTER LUCK NEXT TIME---");
-    }
-    else if (up<1 || up>4) {printf("cba \n");}
-}
-int main(){
-    int up; //user's pick
-    int cp; //computer's pick
-    printf("WELCOME TO THE MATCHSTICK GAME \n");
-    printf("PICK A NUMBER FROM WITHIN 1-4 : \n");
-    scanf("%d", &up);
-    if (up==1){
-        printf("cp=9 \n");
-        printf("enter user pick : \n");
+    int main(){
+        printf("Enter User's Pick : \n");
         scanf("%d", &up);
-        sechalf(up,cp);
+        switch(up){
+            case 1:
+            printf("CP=9 \n");
+            printf("Enter Second Pick : \n");
+            scanf("%d",&s_up);
+            secondhalf(s_up);
+            break;
+            case 2:
+            printf("CP=8 \n");
+            printf("Enter Second Pick : \n");
+            scanf("%d",&s_up);
+            secondhalf(s_up);
+            break;
+            case 3:
+            printf("CP=7 \n");
+            printf("Enter Second Pick : \n");
+            scanf("%d",&s_up);
+            secondhalf(s_up);
+            break;
+            case 4:
+            printf("CP=6 \n");
+            printf("Enter Second Pick : \n");
+            scanf("%d",&s_up);
+            secondhalf(s_up);
+            break;
+            default : 
+            printf("--INVALID INPUT: 1-4 CHOICE OF MATCHSTICKS--");
+        }
+        return 0;
     }
-    else if (up==2){
-        printf("cp=8 \n");
-        printf("enter user pick : \n");
-        scanf("%d", &up);
-        sechalf(up,cp);
-    }
-    else if (up==3){
-        printf("cp=7 \n");
-        printf("enter user pick : \n");
-        scanf("%d", &up);
-        sechalf(up,cp);
-    }
-    else if (up==4){
-        printf("cp=6 \n");
-        printf("enter user pick : \n");
-        scanf("%d", &up);
-        sechalf(up,cp);
-    }
-    else printf("CBA \n");
-    return 0;
-}
