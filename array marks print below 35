@@ -1,0 +1,19 @@
+/*INPUTTING AN ARRAY OF MARKS OF STUDENTS, IF THE MARK OF ANY STUDENT IS LESS THAN 35 PRINT THEIR MARKS. */
+
+#include <stdio.h>
+int main(){
+    int i;
+    int res[10]; //result array
+    for (i=0;i<10;i++){
+        printf("res[%d] : ", i);
+        scanf("%d", &res[i]);
+    }
+    for (i=0;i<10;i++){
+     if (res[i]<35){
+     printf("%d ", res[i]);
+    }
+    }
+   
+    
+    return 0;
+}
