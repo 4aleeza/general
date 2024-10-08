@@ -1,0 +1,17 @@
+/*CALCULATE PRODUCT OF ARRAY VALUES*/
+#include <stdio.h>
+int main(){
+    int n; //array number user input
+    int i; //iteration
+    int prod=1; //product of array values
+    printf("enter n: \n");
+    scanf("%d", &n);
+    int arr[n];
+    for (i=0;i<=n-1;i++){
+        printf("arr[%d] : \n",i);
+        scanf("%d", &arr[i]);
+        prod=prod*arr[i];
+    }
+    printf("product : %d \n", prod);
+    return 0;
+}
