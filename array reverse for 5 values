@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main(){
+    /*input from user and reverse it using arrays*/
+    int arr[5];
+    int i;
+    for (i=0;i<=4;i=i+1){
+        printf("enter arr[%d] : \n", i);
+        scanf("%d", &arr[i]);
+    }
+     printf("arr[3] : %d \n",arr[3]);
+     for (i=4;i>=0;i--){            //to print in reverse
+         printf("%d ", arr[i]);
+     }
+    return 0;
+}
