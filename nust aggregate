@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+    printf(" NUST AGGREGATE CALCULATOR \n");
+    printf("Please enter your O Level equivalent percentage : \n");
+    float olevequiv;
+    scanf("%f", &olevequiv);
+    float a = olevequiv*0.25 ;
+    printf("Please enter your obtained marks in NET \n");
+    int netmarks;
+    scanf("%d", &netmarks);
+    float netperc = (netmarks/200.0)*100.0 ;
+    float b = netperc*0.75 ;
+    float aggregate = a + b;
+    printf("YOUR TOTAL AGGREGATE FOR NUST IS : %f \n", aggregate);
+    return 0;
+}
