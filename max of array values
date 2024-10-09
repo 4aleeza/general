@@ -1,0 +1,20 @@
+//find max of arrays//
+#include <stdio.h>
+int main(){
+    int x; //array number
+    int i;
+    int max=-1; //max value in arrays
+    
+    printf("enter x: \n");
+    scanf("%d", &x);
+    int arr[x];
+    for (i=0;i<=x-1;i++){
+    printf("arr[%d] : \n", i);
+    scanf("%d", &arr[i]);
+    if (arr[i]>max){
+        max=arr[i];
+    }}
+    printf("max : %d", max);
+
+    return 0;
+}
