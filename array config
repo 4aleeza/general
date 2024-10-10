@@ -1,0 +1,24 @@
+/*given an array of integers, change the value of all odd indexed elements to its second multiple and increment all even indexed values by 10: */
+#include <stdio.h>
+int main(){
+    int x; //array size
+    int i;
+    int newarr; //new array
+    printf("enter array size : \n");
+    scanf("%d", &x);
+    int arr[x];
+    for (i=0;i<x;i++){
+        printf("arr[%d] : \n", i);
+        scanf("%d", &arr[i]);
+        if (i%2==0){
+            newarr=arr[i]+10;
+            printf("incremented even indexed value by 10 : %d \n", newarr);
+        }
+        else {
+            newarr=arr[i]*2;
+            printf("multiplied by 2 for odd indexed : %d \n", newarr);
+        }
+    }
+    return 0;
+
+}
