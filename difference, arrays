@@ -1,0 +1,26 @@
+/*FIND THE DIFF BETWEEN SUM OF ELEMENTS AT EVEN INDEXES TO THE SUM OF ELEMENTS AT ODD INDEXES : */
+#include <stdio.h>
+int main(){
+    int x; //array size
+    int i; //increment
+    int newarr; //new array
+    int eindex=0; //even index
+    int oindex=0; //odd index
+    int diff; //diff bw eindex and oindex
+    printf("enter array size : \n");
+    scanf("%d", &x);
+    int arr[x];
+    for (i=0;i<x;i++){
+    printf("arr[%d] : \n", i);
+    scanf("%d", &arr[i]);
+    if (i%2==0){
+        eindex=eindex+arr[i];
+    }
+    else oindex=oindex+arr[i];
+    }
+    printf("even index : %d \n", eindex);
+    printf("odd index : %d \n", oindex);
+    diff = eindex-oindex;
+    printf("diff : %d \n", diff);
+    return 0;
+}
