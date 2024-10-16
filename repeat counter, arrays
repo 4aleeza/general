@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+int main(){
+    int x;
+    int i;
+    int det; //counter
+    int y; //for comparsion of arr[i] values
+    printf("enter x : \n");
+    scanf("%d", &x);
+    int arr[x];
+    for (i=0;i<x;i++){
+        printf("arr[%d] : \n", i);
+        scanf("%d",&arr[i]);
+        
+    }
+    for (i=0;i<x;i++){
+            int det=1; //default count value as all elements entered occur once naturally
+            for (y = i + 1; y < x; y++) { /*y = i + 1 so that the loop doesnt count its own value as a repeat*/ 
+                if (arr[i] == arr[y]) { //checks if we have any equal values
+                    det++; // Increment count if a match is found
+                }
+    }
+    if (det>1){
+        printf("%d occurs %d times\n", arr[i], det);
+    }
+    return 0;
+}
+}
