@@ -1,0 +1,43 @@
+#include <stdio.h>
+int main(){
+    int pin= 243053;
+    int tpin;
+    int opt; 
+    double balance=20562.237785;
+    int an=0010001; //acct number
+    int pan; //payees an
+    double send; //amount to be sent
+    double rem;
+    int npin;
+    printf("PRESS 1 TO CHECK BALANCE \n PRESS 2 TO TRANSFER TO ANOTHER BANK \n PRESS 3 TO CHANGE PIN \n ENTER CODE : \n");
+    scanf("%d", &opt);
+    switch(opt){
+        case 1: 
+        printf("CURRENT BALANCE : %.2lf \n ACCOUNT NUMBER : %d \n", balance, an);
+        break;
+        case 2:
+        printf("ENTER PAYEE BANK ACCOUNT  NUMBER : \n");
+        scanf("%d", &pan);
+        printf("ENTER AMOUNT TO BE SENT : \n");
+        scanf("%lf", &send);
+        while (send>balance){
+            printf("INSUFFICIENT BALANCE \n RE-ENTER AMOUNT TO BE SENT : \n");
+            scanf("%lf", &send);
+        }
+        rem=balance-send;
+        printf("TRANSACTION SUCCESSFUL! \n CURRENT BALANCE : %.2lf \n", rem);
+        break;
+        case 3: 
+        printf("PLEASE ENTER PIN : \n");
+        scanf("%d", &tpin);
+        while (tpin!=pin){
+            printf("INCORRECT PIN \n RE-ENTER PIN : \n");
+            scanf("%d", &tpin);
+        }
+        printf("ENTER NEW PIN : \n");
+        scanf("%d", &npin);
+        printf("PIN CHANGED SUCCESFULLY! \n");
+        break;
+    }
+    return 0;
+}
