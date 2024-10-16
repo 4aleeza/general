@@ -1,0 +1,29 @@
+//min and second min
+#include <stdio.h>
+#include <limits.h>
+int main(){
+    int x; //array size
+    int i;
+    printf("enter array size : \n");
+    scanf("%d", &x);
+    int arr[x];
+    for (i=0;i<x;i++){
+        printf("arr[%d] : \n", i);
+        scanf("%d", &arr[i]);
+    }
+    int min = INT_MAX;
+    int smin = INT_MAX;
+    for (i=0;i<x;i++){
+        if (arr[i]<min){
+            min=arr[i];
+        }
+    }
+    printf("min : %d \n", min);
+    for (i=0;i<x;i++){
+        if (arr[i]<smin && arr[i]!=min){
+            smin=arr[i];
+        }
+    }
+    printf("smin : %d", smin);
+    return 0;
+}
