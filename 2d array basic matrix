@@ -1,0 +1,28 @@
+//write a program to store roll numbers and marks of students in a side by side matrix
+#include <stdio.h>
+int main(){
+int sr; //row
+int m; //column
+int r; //rows
+int c; //columns
+printf("enter r : \n");
+scanf("%d",&r);
+printf("enter c : \n");
+scanf("%d",&c);
+int arr[r][c];
+printf("enter array : \n");
+for (int i=0;i<r;i++){
+    for (int j=0;j<c;j++){
+        scanf("%d",&arr[i][j]);
+    }
+}
+for (int i=0;i<r;i++){
+    for (int j=0;j<c;j++){
+        printf("%d ",arr[i][j]);
+    }
+    printf("\n");
+}
+return 0;
+}
+// if you wanted to store the data (sr# and marks) of 4 students, you'd place 4 rows and 2 columns.
+// for this case scenario specifically, it works like {{sr#, marks}...}; so enter accordingly.
