@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+#include <ctype.h>
+int main(){
+char w1[10];
+char w2[10];
+int count[26]={0};
+printf("enter w1 : \n");
+scanf("%s",w1);
+printf("enter w2 : \n");
+scanf("%s",w2);
+for (int i=0;w1[i]!='\0';i++){
+    count[w1[i]-'a']++; /*if we have char b, it will subtract asci value of char a from char b, 
+    will save index for b, in this case it will 
+    be w1[1] and will increment count for this index for b
+    */
+}
+for (int i=0;w2[i]!='\0';i++){
+    count[w2[i]-'a']--; /*code will subtract indexes like
+    if we have b here and above as well, it will get b from
+    w2[1] to 0, if all indexes get 0 we know its an anagram
+    */
+}
+int anagram=1; //by default assuming the words are anagrams
+for (int i=0;i<26;i++){
+    if (count[i]!=0) {
+        anagram=0;
+        break;
+    }
+}
+if (anagram==1){
+    printf("anagrams \n");
+}
+else {
+    printf("not anagrams \n");
+}
+}
