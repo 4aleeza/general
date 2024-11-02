@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main(){
+    int r,c;
+    int i,j;
+    int rsum; //row sum
+    int mrsum=0; //max row sum
+    int maxrow;
+    printf("r : \n");
+    scanf("%d",&r);
+    printf("c : \n");
+    scanf("%d",&c);
+    int arr[r][c];
+    for (i=0;i<r;i++){
+        rsum=0; 
+        for (j=0;j<c;j++){
+            printf("arr[%d][%d] : \n",i,j);
+            scanf("%d",&arr[i][j]);
+            rsum=rsum+arr[i][j];
+        }
+        if (mrsum<rsum){
+            mrsum=rsum;
+            maxrow = i;
+        }
+    }
+    printf("max row sum : %d & max row number : %d \n",mrsum,maxrow);
+}
