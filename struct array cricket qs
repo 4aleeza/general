@@ -1,0 +1,27 @@
+/*a record contains name, age,no of test matches, avg runs scored in each test match of the cricketer. 
+create an array to hold records of 20 cricketers (user input)*/
+#include <stdio.h>
+#include <string.h>
+int main(){
+    typedef struct cric{
+        char name[15];
+        int age;
+        int n; //no of test matches
+        float avg; 
+    }cric;
+    cric arr[2];
+    for (int i=0;i<2;i++){
+        printf("name[%d] : \n",i);
+        scanf("%s",arr[i].name);
+        printf("no of test matches : \n");
+        scanf("%d",&arr[i].n);
+        printf("age : \n");
+        scanf("%d",&arr[i].age);
+        printf("avg : \n");
+        scanf("%f",&arr[i].avg);
+    }
+    //data fetched from user
+    for (int i=0;i<2;i++){
+        printf("name : %s, num of test matches : %d, age : %d, avg : %f \n",arr[i].name,arr[i].n,arr[i].age,arr[i].avg);
+    }
+}
