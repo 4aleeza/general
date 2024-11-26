@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <time.h>
+int main(){
+    time_t rawtime; //declaring rawtime for usage of time_t
+    struct tm *currtime; //making current time a part of the structure
+    time(&rawtime); //passing time through variable to be used later
+
+    char buffer[50]; //string to be used to display time/date
+    currtime=localtime(&rawtime); //passing variable rawtime to localise it using local function, storing in currtime
+    strftime(buffer,sizeof(buffer),"%S:%m:%d", currtime);
+    printf("CURRENT DATE (Y/M/D) : %s \n",buffer);
+    return 0;
+}
