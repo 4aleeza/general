@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <unistd.h>
+#define MAXL 50
+
+void func(int id,int prog);
+void func(int id,int prog){
+    printf("ID %d : [",id);
+    for (int i=0;i<MAXL;i++){
+        if (i<prog){
+            printf("=");
+        }
+        else printf(" ");
+    }
+    printf("] %d%%\r",prog);
+    fflush(stdout);
+}
+int main(){
+    int id=2;
+    int prog=25;
+    for (int i=0;i<=prog;i++){
+        func(id,i);
+        usleep(100000);
+    }
+    printf("\n");
+    return 0;
+}
