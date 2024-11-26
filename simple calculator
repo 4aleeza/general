@@ -1,0 +1,95 @@
+//add sub multiply div mod pwr exit
+
+#include <stdio.h>
+int add(int x1,int x2);
+int add(int x1,int x2){
+    int z = x1+x2;
+    return z;
+}
+int sub(int x1,int x2);
+int sub(int x1,int x2){
+   int z = x1-x2;
+
+   printf("%d - %d = %d \n",x1,x2,z);
+   return z;
+}
+float div(int x1,int x2);
+float div(int x1, int x2){
+   float z = x1/x2;
+   printf("%d/%d = %f \n",x1,x2,z);
+   return z;
+}
+int prod(int x1,int x2);
+int prod(int x1,int x2){
+    int z = x1*x2;
+    return z;
+    printf("product of %d into %d is : %d \n", x1,x2,z);
+}
+int pwr(int b, int p);
+int pwr(int b, int p){
+    {
+    if (p==0) return 1;
+    else 
+    return b*pwr(b,p-1);
+    }
+    
+}
+
+int ex();
+int ex(){
+    printf("OPENS UP AT 08:00PST SHARP! \n");
+}
+int main(){
+    int x1,x2,b,p;
+    int ans;
+    printf("1. ADD \n 2. SUBTRACT \n 3. DIVIDE \n 4. MULTIPLY 5. POWER \n 6. EXIT \n ENTER OPTION : \n");
+    scanf("%d",&ans);
+    while (ans<1 || ans>6){
+        printf("ENTER A VALID VALUE : \n");
+        scanf("%d",&ans);
+    }
+    switch (ans) {
+        case 1: 
+        printf("ENTER x1: \n");
+        scanf("%d",&x1);
+        printf("ENTER x2: \n");
+        scanf("%d",&x2);
+        add(x1,x2);
+        break;
+                case 2: 
+        printf("ENTER x1: \n");
+        scanf("%d",&x1);
+        printf("ENTER x2: \n");
+        scanf("%d",&x2);
+        sub(x1,x2);
+        break;
+                case 3: 
+        printf("ENTER x1: \n");
+        scanf("%d",&x1);
+        printf("ENTER x2: \n");
+        scanf("%d",&x2);
+        div(x1,x2);
+        break;
+                case 4: 
+        printf("ENTER x1: \n");
+        scanf("%d",&x1);
+        printf("ENTER x2: \n");
+        scanf("%d",&x2);
+        prod(x1,x2);
+        break;
+
+        case 5:
+        printf("ENTER b: \n");
+        scanf("%d",&b);
+        printf("ENTER p: \n");
+        scanf("%d",&p);
+        int z= pwr(b,p);
+        printf("%d^%d=%d \n",b,p,z);
+        break;
+        
+        case 6:
+        ex();
+
+    }
+
+}
