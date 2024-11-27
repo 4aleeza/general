@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
-#define MAXL 50
+#define MAXL 100
 
 void func(int id,int prog);
 void func(int id,int prog){
