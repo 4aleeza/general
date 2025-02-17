@@ -1,0 +1,21 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+class math {
+	int x1, x2, y1, y2;
+public:
+	math(int, int, int, int);
+	void dist() {
+		cout << "Distance: " << sqrt((x1 - x2) + (y1 - y2));
+	}
+};
+math::math(int a, int b, int c, int d) {
+	x1 = a;
+	x2 = b;
+	y1 = c;
+	y2 = d;
+}
+int main() {
+	math obj(13, 4, 6, 2);
+	obj.dist();
+}
